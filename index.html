@@ -58,16 +58,15 @@
                 </div>
                 <div class="tab-contents" id="projetos">
                     <ul>
-                        <li><span>Analise de Dados</span><br>Relatórios e Dashboards interativos com Power BI e Excel </li>
-                        <li><span>Desenvolvemento Web</span><br>Criação de Sites com Tecnologias Front End</li>
-                        <li><span>Desenvolvimento Backend</span><br>Desenvolvimento de Aplicativos com Java</li>
+                        <li><span>Projeto Site Rosa Chic</span><br>Javascript, HTML, CSS</li>
+                        <li><span>Projeto Planilha Excel</span><br>Excel</li>
+                        <li><span>Projeto Sistema de Hotel</span><br>Java</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="educacao">
                     <ul>
-                        <li><span>Analise de Dados</span><br>Relatórios e Dashboards interativos com Power BI e Excel </li>
-                        <li><span>Desenvolvemento Web</span><br>Criação de Sites com Tecnologias Front End</li>
-                        <li><span>Desenvolvimento Backend</span><br>Desenvolvimento de Aplicativos com Java</li>
+                        <li><span>Curso Superior</span><br>UNIP - Análise e Desenvolvimento de Sistemas </li>
+                        <li><span>Curso Tecnico</span><br>Microcamp - Hardware (Interrompido)</li>
                     </ul>
                 </div>
             </div>
@@ -86,7 +85,8 @@
         for(tabcontent of tabcontents){
             tabcontent.classList.remove("active-tab");
         }
-       
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
     }
 
 </script>
