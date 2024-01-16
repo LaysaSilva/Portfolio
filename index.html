@@ -45,11 +45,25 @@
                 </p>
                 <br>
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Projetos</p>
-                    <p class="tab-links">Educação</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('projetos')">Projetos</p>
+                    <p class="tab-links" onclick="opentab('educacao')">Educação</p>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Analise de Dados</span><br>Relatórios e Dashboards interativos com Power BI e Excel </li>
+                        <li><span>Desenvolvemento Web</span><br>Criação de Sites com Tecnologias Front End</li>
+                        <li><span>Desenvolvimento Backend</span><br>Desenvolvimento de Aplicativos com Java</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="projetos">
+                    <ul>
+                        <li><span>Analise de Dados</span><br>Relatórios e Dashboards interativos com Power BI e Excel </li>
+                        <li><span>Desenvolvemento Web</span><br>Criação de Sites com Tecnologias Front End</li>
+                        <li><span>Desenvolvimento Backend</span><br>Desenvolvimento de Aplicativos com Java</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="educacao">
                     <ul>
                         <li><span>Analise de Dados</span><br>Relatórios e Dashboards interativos com Power BI e Excel </li>
                         <li><span>Desenvolvemento Web</span><br>Criação de Sites com Tecnologias Front End</li>
@@ -60,6 +74,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+       
+    }
+
+</script>
 
 </body>
 </html>
